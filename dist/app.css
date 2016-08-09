@@ -171,45 +171,63 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%; }
-  .tab #tab1:checked ~ .controlled-content .nav .icon-1 {
-    color: white; }
-  .tab #tab1:checked ~ .controlled-content .nav .icon-1::after {
-    display: block; }
-  .tab #tab1:checked ~ .controlled-content .show-1 {
-    display: block; }
-  .tab #tab2:checked ~ .controlled-content .nav .icon-2 {
-    color: white; }
-  .tab #tab2:checked ~ .controlled-content .nav .icon-2::after {
-    display: block; }
-  .tab #tab2:checked ~ .controlled-content .show-2 {
-    display: block; }
-  .tab #tab3:checked ~ .controlled-content .nav .icon-3 {
-    color: white; }
-  .tab #tab3:checked ~ .controlled-content .nav .icon-3::after {
-    display: block; }
-  .tab #tab3:checked ~ .controlled-content .show-3 {
-    display: block; }
+  @media screen and (min-width: 776px) {
+    .tab #tab1:checked ~ .controlled-content .nav .icon-1 {
+      color: white; }
+    .tab #tab1:checked ~ .controlled-content .nav .icon-1::after {
+      display: block; }
+    .tab #tab1:checked ~ .controlled-content .show-1 {
+      display: block; }
+    .tab #tab2:checked ~ .controlled-content .nav .icon-2 {
+      color: white; }
+    .tab #tab2:checked ~ .controlled-content .nav .icon-2::after {
+      display: block; }
+    .tab #tab2:checked ~ .controlled-content .show-2 {
+      display: block; }
+    .tab #tab3:checked ~ .controlled-content .nav .icon-3 {
+      color: white; }
+    .tab #tab3:checked ~ .controlled-content .nav .icon-3::after {
+      display: block; }
+    .tab #tab3:checked ~ .controlled-content .show-3 {
+      display: block; } }
   .tab--center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media screen and (max-width: 776px) {
+      .tab--center {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: translate(0); } }
   .tab .nav {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     width: 100%; }
+    @media screen and (max-width: 776px) {
+      .tab .nav {
+        width: 100%; } }
     .tab .nav .icon {
       position: relative;
-      font-size: 3em;
+      font-size: 3rem;
       width: 0.5em;
       height: 1em;
       margin: 0 0.5em; }
+      @media screen and (max-width: 776px) {
+        .tab .nav .icon {
+          margin-top: 0.5em;
+          font-size: 3rem;
+          justify-content: space-between; } }
       .tab .nav .icon::before {
         position: absolute;
         content: attr("");
         bottom: 50%; }
+        @media screen and (max-width: 776px) {
+          .tab .nav .icon::before {
+            bottom: 0; } }
         .tab .nav .icon::before--selected {
           color: white; }
       .tab .nav .icon::after {
@@ -228,8 +246,16 @@ body {
     width: 100%;
     top: 0;
     display: none; }
+    @media screen and (max-width: 776px) {
+      .tab .tab-content {
+        display: block; } }
     .tab .tab-content--solid {
       background-color: white; }
+      @media screen and (max-width: 776px) {
+        .tab .tab-content--solid {
+          margin: 0.5em auto;
+          width: 95%;
+          padding: 0.5em; } }
 
 .tab {
   width: 992px; }
@@ -258,6 +284,9 @@ body {
     height: 100%; }
     .main .home-content .tab .tab-content .block-image {
       flex-basis: 331px; }
+      @media screen and (max-width: 776px) {
+        .main .home-content .tab .tab-content .block-image {
+          flex: 1; } }
     .main .home-content .tab .tab-content .block-text {
       flex: 1;
       padding: 3em; }
@@ -271,5 +300,12 @@ body {
         color: #aaa;
         letter-spacing: -0.015em;
         font-weight: 100; }
+      @media screen and (max-width: 776px) {
+        .main .home-content .tab .tab-content .block-text {
+          text-align: center; }
+          .main .home-content .tab .tab-content .block-text h1 {
+            font-size: 2em; }
+          .main .home-content .tab .tab-content .block-text p {
+            font-size: 1.5em; } }
 
 /*# sourceMappingURL=app.css.map */

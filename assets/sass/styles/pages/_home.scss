@@ -16,7 +16,12 @@
 
         .block-image {
           flex-basis: 331px;
+
+					@include media-query(sm,max) {
+						flex:1;
+					}
         }
+
         .block-text {
           flex:1;
           padding: 3em;
@@ -34,6 +39,16 @@
             letter-spacing: -0.015em;
             font-weight: 100;
           }
+
+					@include media-query(sm,max) {
+						text-align: center;
+						h1 {
+							  font-size: 2em;
+						}
+						p {
+							font-size: 1.5em;
+						}
+					}
         }
       }
     }

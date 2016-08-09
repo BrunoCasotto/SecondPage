@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  // é feito um for com o numero de tabs, habilitando a selecionada.
 
-    @for $i from 1 through 3{
+  @include media-query(sm,min) {
+    @for $i from 1 through $tab{
       #tab#{$i}:checked ~ .controlled-content .nav .icon-#{$i} {
         color: white;
       }
@@ -15,12 +15,20 @@
         display:block;
       }
     }
+  }
 
   &--center {
     position: absolute;
     top:50%;
     left: 50%;
     transform:translate(-50%, -50%);
+
+    @include media-query(sm,max) {
+      position:static;
+      top:auto;
+      left: auto;
+      transform: translate(0);
+    }
   }
 
   .nav {
@@ -30,17 +38,31 @@
     align-items: center;
     width: 100%;
 
+    @include media-query(sm,max) {
+      width: 100%;
+    }
+
     .icon {
       position: relative;
-      font-size: 3em;
+      font-size: 3rem;
       width: 0.5em;
       height: 1em;
       margin:0 0.5em;
+
+      @include media-query(sm,max) {
+        margin-top: 0.5em;
+        font-size: 3rem;
+        justify-content: space-between;
+      }
 
       &::before {
         position: absolute;
         content:attr('');
         bottom: 50%;
+
+        @include media-query(sm,max) {
+          bottom:0;
+        }
 
         &--selected {
           color:white;
@@ -66,23 +88,23 @@
     display: none;
   }
 
-
-
   .tab-content {
     width: 100%;
     top:0;
     display: none;
 
+    @include media-query(sm,max) {
+      display: block;
+    }
+
     &--solid {
       background-color: white;
-    }
-  }
 
-  &__nav {
-    &__icon {
+      @include media-query(sm,max) {
+        margin:0.5em auto;
+        width: 95%;
+        padding: 0.5em;
+      }
     }
-  }
-
-  &__tab-content {
   }
 }
