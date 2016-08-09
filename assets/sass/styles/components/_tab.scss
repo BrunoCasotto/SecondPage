@@ -47,9 +47,20 @@
     }
   }
 
+  .tab-controll {
+    display: none;
+  }
+  // é feito um for com o numero de tabs, habilitando a selecionada.
+  @for $i from 1 through 3{
+    #tab#{$i}:checked + .tab-content-#{$i}{
+      display: block;
+    }
+  }
+
   .tab-content {
     width: 100%;
     top:0;
+    display: none;
 
     &--solid {
       background-color: white;
@@ -57,13 +68,10 @@
   }
 
   &__nav {
-
     &__icon {
-
     }
   }
 
   &__tab-content {
   }
-
 }

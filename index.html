@@ -11,21 +11,17 @@
       <div class="main">
         <div class="home-content">
           <div class="tab tab--center">
-            <div class="tab-controller">
-              <input checked="checked" type="radio" id="tab1" name="tab-c" >
-              <input type="radio" id="tab2" name="tab-c">
-              <input type="radio" id="tab3" name="tab-c">
-            </div>
             <div class="nav">
               <ul class="list-tab">
                 <li class="tab1"><label for="tab1" class="icon fa fa-home"></label></li>
-                <li class="tab2"><label for="tab1" class="icon fa fa-folder"></label></li>
-                <li class="tab3"><label for="tab1" class="icon fa fa-envelope"></label></li>
+                <li class="tab2"><label for="tab2" class="icon fa fa-folder"></label></li>
+                <li class="tab3"><label for="tab3" class="icon fa fa-envelope"></label></li>
                 <li ><label  class="icon fa fa-twitter"></label></li>
               </ul>
             </div>
-            <div class="tab-content tab-content--solid">
-              <div id="tab-content1" class="tab1 container">
+            <input type="radio" id="tab1" name="tab-c" class="tab-controll" checked="checked">
+            <div class="tab-content tab-content--solid tab-content-1">
+              <div class="container">
                 <div class="row container__row">
                   <div class="block container__row__block block-text">
                     <h1>Jane Doe</h1><br>
@@ -33,6 +29,28 @@
                   </div>
                   <div class="block container__row__block block-image">
                     <img src="img/me.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="radio" id="tab2" name="tab-c"class="tab-controll" >
+            <div class="tab-content tab-content--solid tab-content-2">
+              <div class="container">
+                <div class="row container__row">
+                  <div class="block container__row__block block-text">
+                    <h1>Second page</h1><br>
+                    <p>Senior Astral Projectionist</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="radio" id="tab3" name="tab-c" class="tab-controll">
+            <div class="tab-content tab-content--solid tab-content-3">
+              <div class="container">
+                <div class="row container__row">
+                  <div class="block container__row__block block-text">
+                    <h1>third page</h1><br>
+                    <p>Senior Astral Projectionist</p>
                   </div>
                 </div>
               </div>

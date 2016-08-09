@@ -28,12 +28,4 @@
         }
       }
     }
-
-    &-controller {
-        display: none;
-    }
-}
-
-@for $i from 1 through 5{
-  #tab#{$i}:checked ~ .tab-content #tab-content#{$i}{display: block;}
 }
