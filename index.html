@@ -2,12 +2,76 @@
 <html>
     <head>
         <title>My Website</title>
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
+      <div class="main">
+        <div class="home-content">
 
+          <div class="tab tab--center">
+            <input type="radio" id="tab1" name="tab-c" class="tab-controll" checked="checked">
+            <input type="radio" id="tab2" name="tab-c"class="tab-controll" >
+            <input type="radio" id="tab3" name="tab-c" class="tab-controll">
+
+            <div class="controlled-content">
+              <div class="nav">
+                <ul class="list-tab">
+                  <li class="tab1">
+                    <label for="tab1" class="icon fa fa-home icon-1"></label>
+                  </li>
+                  <li class="tab2">
+                    <label for="tab2" class="icon fa fa-folder icon-2"></label>
+                  </li>
+                  <li class="tab3">
+                    <label for="tab3" class="icon fa fa-envelope icon-3"></label>
+                  </li>
+                  <li >
+                    <label  class="icon fa fa-twitter"></label>
+                  </li>
+                </ul>
+              </div>
+
+                <div  class=" tab-content tab-content--solid show-1">
+                  <div class="container">
+                    <div class="row container__row">
+                      <div class="block container__row__block block-text">
+                        <h1>Jane Doe</h1><br>
+                        <p>Senior Astral Projectionist</p>
+                      </div>
+                      <div class="block container__row__block block-image">
+                        <img src="img/me.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content tab-content--solid show-2">
+                  <div class="container">
+                    <div class="row container__row">
+                      <div class="block container__row__block block-text">
+                        <h1>Second page</h1><br>
+                        <p>Senior Astral Projectionist</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-content tab-content--solid show-3">
+                  <div class="container">
+                    <div class="row container__row">
+                      <div class="block container__row__block block-text">
+                        <h1>third page</h1><br>
+                        <p>Senior Astral Projectionist</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </body>
 </html>

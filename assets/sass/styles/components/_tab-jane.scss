@@ -1,0 +1,30 @@
+.tab {
+    width: map-get($sizes, md);
+    @include media-query(md,max) {
+      width: 100%;
+    }
+
+    &-content {
+      .container {
+        width: 100%;
+      }
+    }
+
+    .nav {
+
+      .list-tab {
+        list-style-type: none;
+
+        li {
+          display:inline;
+        }
+
+        .icon {
+          color:#ebc7bc;
+          &--selected {
+            color:white;
+          }
+        }
+      }
+    }
+}

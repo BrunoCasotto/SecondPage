@@ -1,0 +1,88 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  // é feito um for com o numero de tabs, habilitando a selecionada.
+
+    @for $i from 1 through 3{
+      #tab#{$i}:checked ~ .controlled-content .nav .icon-#{$i} {
+        color: white;
+      }
+      #tab#{$i}:checked ~ .controlled-content .nav .icon-#{$i}::after {
+        display:block;
+      }
+      #tab#{$i}:checked ~ .controlled-content .show-#{$i} {
+        display:block;
+      }
+    }
+
+  &--center {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
+
+  .nav {
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .icon {
+      position: relative;
+      font-size: 3em;
+      width: 0.5em;
+      height: 1em;
+      margin:0 0.5em;
+
+      &::before {
+        position: absolute;
+        content:attr('');
+        bottom: 50%;
+
+        &--selected {
+          color:white;
+        }
+      }
+
+      &::after{
+        content:'';
+        position: absolute;
+        border-top: solid 0.5em transparent;
+        border-right: solid 0.5em transparent;
+        border-left: solid 0.5em transparent;
+        border-bottom: solid 0.5em white;
+        border-bottom-width: 0.5em;
+        bottom:-6px;
+        display: none;
+      }
+    }
+
+  }
+
+  .tab-controll {
+    display: none;
+  }
+
+
+
+  .tab-content {
+    width: 100%;
+    top:0;
+    display: none;
+
+    &--solid {
+      background-color: white;
+    }
+  }
+
+  &__nav {
+    &__icon {
+    }
+  }
+
+  &__tab-content {
+  }
+}
