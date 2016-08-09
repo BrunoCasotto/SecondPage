@@ -1,0 +1,40 @@
+.main {
+	display: flex;
+	flex-direction: column;
+
+.container {
+		width: 1200px;
+		margin:0 auto;
+		@include media-query(gl,max) {
+			width: 100%;
+		}
+
+		.row {
+			width: 100%;
+			display: flex;
+
+			.block {
+				display: flex;
+			}
+		}
+
+		&__row {
+			justify-content: center;
+			align-items: center;
+			@include media-query(sm) {
+				flex-direction: column;
+			}
+
+			&--wrap {
+				flex-wrap: wrap;
+			}
+
+			&__block {
+				flex-direction: column;
+				@include media-query(sm) {
+				padding: 0;
+				}
+			}
+		}
+	}
+}

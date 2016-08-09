@@ -1,6 +1,23 @@
-$color: red;
-$color2: blue;
+/* bases and resets */
+@import "base/base";
 
-.test-class {
-    background-color: $color;
-}
+/*config*/
+@import "config/vars";
+@import "config/mixin";
+
+/* template */
+@import "styles/template";
+
+/* modules */
+@import "styles/modules/content";
+
+/* components */
+@import "styles/components/buttons";
+@import "styles/components/block-content";
+@import "styles/components/grid";
+@import "styles/components/form";
+@import "styles/components/tab";
+@import "styles/components/tab-jane";
+
+/*pages*/
+@import "styles/pages/home";

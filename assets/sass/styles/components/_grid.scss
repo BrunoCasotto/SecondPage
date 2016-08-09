@@ -1,0 +1,85 @@
+.grid {
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+	@include media-query(sm,max) {
+		width: 100%;
+	}
+
+	&__row {
+		display: flex;
+		margin: 0 auto;
+
+		@include media-query(sm,max) {
+			flex-direction: column;
+			width: 90%;
+			height: 80%;
+		}
+
+		&--space {
+				justify-content: space-between;
+		}
+	}
+
+	.row {
+		align-items: center;
+		justify-content: center;
+		margin:0 auto;
+
+		&__col{
+		}
+	}
+	.col {
+		display: flex;
+		flex-direction: column;
+
+		//to screen with sm or more
+		@include media-query(xs,min) {
+			&--sm{
+				width: 100%;
+				margin: map-get($grid-offsets,sm);
+			}
+			&--md{
+				width: 100%;
+				margin: map-get($grid-offsets,md);
+			}
+			&--gl{
+				width: 100%;
+				margin: map-get($grid-offsets,gl);
+			}
+		}
+		//to screen with md or more
+		@include media-query(md,min) {
+			&--sm{
+				width: calc( #{map-get($sizes,md) / 2 - map-get($grid-offsets,sm) * 2});
+				margin: map-get($grid-offsets,sm);
+			}
+			&--md{
+				width: calc( #{map-get($sizes,md) / 3 - map-get($grid-offsets,md) * 3});
+				margin: map-get($grid-offsets,md);
+			}
+			&--gl{
+				width: map-get($sizes,md - map-get($grid-offsets,md));
+				margin: map-get($grid-offsets,md);
+			}
+		}
+
+		//to screen with gl or more
+		@include media-query(gl,min) {
+			&--sm{
+				width: calc( #{map-get($sizes,gl) / 2 - map-get($grid-offsets,sm) * 2});
+				margin: map-get($grid-offsets,sm);
+			}
+			&--md{
+				width: calc( #{map-get($sizes,gl) / 3 - map-get($grid-offsets,md) * 3});
+				margin: map-get($grid-offsets,md);
+			}
+			&--gl{
+				width:calc( #{map-get($sizes,gl) - map-get($grid-offsets,gl)});
+				margin: map-get($grid-offsets,gl);
+			}
+		}
+
+	}
+}
