@@ -4,13 +4,21 @@
   width: 100%;
 
   @include media-query(sm,min) {
+
     @for $i from 1 through $tab{
+
       #tab#{$i}:checked ~ .controlled-content .nav .icon-#{$i} {
         color: white;
+
+        &:hover:before {
+          color:white;
+        }
       }
+
       #tab#{$i}:checked ~ .controlled-content .nav .icon-#{$i}::after {
         display:block;
       }
+
       #tab#{$i}:checked ~ .controlled-content .show-#{$i} {
         display:block;
       }
@@ -31,6 +39,10 @@
     }
   }
 
+  .tab-controll {
+    display: none;
+  }
+
   .nav {
     display: flex;
     flex-flow:row wrap;
@@ -43,17 +55,12 @@
     }
 
     .icon {
-      position: relative;
-      font-size: 3rem;
       width: 0.5em;
       height: 1em;
-      margin:0 0.5em;
-      cursor: pointer;
+      position: relative;
       bottom: 50%;
-      
-      &:before:hover {
-        color:white;
-      }
+      font-size: 3rem;
+      margin:0 0.5em;
 
       @include media-query(sm,max) {
         margin-top: 0.5em;
@@ -64,6 +71,7 @@
       &:before {
         position: absolute;
         bottom: 50%;
+        cursor: pointer;
 
         @include media-query(sm,max) {
           bottom:0;
@@ -72,6 +80,10 @@
         &--selected {
           color:white;
         }
+      }
+
+      &:hover:before {
+        color:#c79180;
       }
 
       &:after{
@@ -86,11 +98,6 @@
         display: none;
       }
     }
-
-  }
-
-  .tab-controll {
-    display: none;
   }
 
   .tab-content {

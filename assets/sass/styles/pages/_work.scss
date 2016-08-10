@@ -1,0 +1,27 @@
+.work-content {
+
+  .container {
+
+    .row {
+
+      .block-text {
+        padding: 3em;
+        justify-content: flex-start;
+        width: 100%;
+
+        h1 {
+          font-size: 2rem;
+          font-weight: 400;
+          letter-spacing: -0.015em;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5em;
+            font-weight: 300;
+            color:#aaa;
+        }
+      }
+    }
+  }
+}
