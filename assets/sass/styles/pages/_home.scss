@@ -5,26 +5,58 @@
 
   .home-content {
     position: absolute;
-    width: 100%;
+		display: flex;
+		flex-direction: column;
+    width: map-get($sizes,md);;
     height: 100%;
+		left: 50%;
+		top:50%;
+		transform: translate(-50%, -50%);
+		@include media-query(md,max) {
+			width: 100%;
+		}
+
+		.controlled-content {
+			position: relative;
+		}
+
+		.footer {
+			justify-content: center;
+			margin-top: 5%;
+			color: rgba(255, 255, 255, 0.45);
+			@include media-query(md,max) {
+				font-size: 0.75rem;
+			}
+		}
 
     .tab{
 
-      .nav {
-      }
       .tab-content {
 
         .block-image {
-          flex-basis: 331px;
+					cursor: pointer;
+					flex-basis: 300px;
+					height: 393px;
+					background-image: url('../img/me.jpg');
+					background-repeat: no-repeat;
+					background-size: cover;
 
-					@include media-query(sm,max) {
-						flex:1;
+					@include media-query(md,max) {
+						width: 240px;
+					}
+					@include media-query(xs,max) {
+						width:100%;
+						margin:0 1em;
 					}
         }
 
         .block-text {
           flex:1;
           padding: 3em;
+
+					@include media-query(md,max) {
+						width: 100%;
+					}
 
           h1 {
             font-size: 3em;
@@ -53,4 +85,5 @@
       }
     }
   }
+
 }

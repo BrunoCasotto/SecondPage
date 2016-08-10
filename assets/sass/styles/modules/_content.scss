@@ -21,6 +21,7 @@
 		&__row {
 			justify-content: center;
 			align-items: center;
+
 			@include media-query(sm) {
 				flex-direction: column;
 			}
@@ -36,5 +37,10 @@
 				}
 			}
 		}
+	}
+	.footer {
+		display: flex;
+		flex:1;
+		width: 100%;
 	}
 }

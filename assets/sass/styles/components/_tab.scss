@@ -48,6 +48,12 @@
       width: 0.5em;
       height: 1em;
       margin:0 0.5em;
+      cursor: pointer;
+      bottom: 50%;
+      
+      &:before:hover {
+        color:white;
+      }
 
       @include media-query(sm,max) {
         margin-top: 0.5em;
@@ -55,9 +61,8 @@
         justify-content: space-between;
       }
 
-      &::before {
+      &:before {
         position: absolute;
-        content:attr('');
         bottom: 50%;
 
         @include media-query(sm,max) {
@@ -69,7 +74,7 @@
         }
       }
 
-      &::after{
+      &:after{
         content:'';
         position: absolute;
         border-top: solid 0.5em transparent;

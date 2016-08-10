@@ -49,6 +49,10 @@ body {
         @media screen and (max-width: 776px) {
           .main .container__row__block {
             padding: 0; } }
+  .main .footer {
+    display: flex;
+    flex: 1;
+    width: 100%; }
 
 /* components */
 .button {
@@ -215,22 +219,25 @@ body {
       font-size: 3rem;
       width: 0.5em;
       height: 1em;
-      margin: 0 0.5em; }
+      margin: 0 0.5em;
+      cursor: pointer;
+      bottom: 50%; }
+      .tab .nav .icon:before:hover {
+        color: white; }
       @media screen and (max-width: 776px) {
         .tab .nav .icon {
           margin-top: 0.5em;
           font-size: 3rem;
           justify-content: space-between; } }
-      .tab .nav .icon::before {
+      .tab .nav .icon:before {
         position: absolute;
-        content: attr("");
         bottom: 50%; }
         @media screen and (max-width: 776px) {
-          .tab .nav .icon::before {
+          .tab .nav .icon:before {
             bottom: 0; } }
-        .tab .nav .icon::before--selected {
+        .tab .nav .icon:before--selected {
           color: white; }
-      .tab .nav .icon::after {
+      .tab .nav .icon:after {
         content: '';
         position: absolute;
         border-top: solid 0.5em transparent;
@@ -280,16 +287,45 @@ body {
   height: 100vh; }
   .main .home-content {
     position: absolute;
-    width: 100%;
-    height: 100%; }
+    display: flex;
+    flex-direction: column;
+    width: 992px;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 992px) {
+      .main .home-content {
+        width: 100%; } }
+    .main .home-content .controlled-content {
+      position: relative; }
+    .main .home-content .footer {
+      justify-content: center;
+      margin-top: 5%;
+      color: rgba(255, 255, 255, 0.45); }
+      @media screen and (max-width: 992px) {
+        .main .home-content .footer {
+          font-size: 0.75rem; } }
     .main .home-content .tab .tab-content .block-image {
-      flex-basis: 331px; }
-      @media screen and (max-width: 776px) {
+      cursor: pointer;
+      flex-basis: 300px;
+      height: 393px;
+      background-image: url("../img/me.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; }
+      @media screen and (max-width: 992px) {
         .main .home-content .tab .tab-content .block-image {
-          flex: 1; } }
+          width: 240px; } }
+      @media screen and (max-width: 336px) {
+        .main .home-content .tab .tab-content .block-image {
+          width: 100%;
+          margin: 0 1em; } }
     .main .home-content .tab .tab-content .block-text {
       flex: 1;
       padding: 3em; }
+      @media screen and (max-width: 992px) {
+        .main .home-content .tab .tab-content .block-text {
+          width: 100%; } }
       .main .home-content .tab .tab-content .block-text h1 {
         font-size: 3em;
         font-weight: 400;
