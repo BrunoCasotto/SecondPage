@@ -5,9 +5,9 @@
     .row {
 
       .block-text {
-        padding: 3em;
         justify-content: flex-start;
         width: 100%;
+        margin-bottom: 30px;
 
         h1 {
           font-size: 2rem;
@@ -49,6 +49,10 @@
 
             @include media-query(md,max) {
               width: 400px;
+            }
+            @include media-query(sm,max) {
+              width: 100%;
+              margin: 10px auto;
             }
           }
         }

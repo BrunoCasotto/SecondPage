@@ -3,7 +3,7 @@
 	  .tab{
 
 			.home-content {
-				
+
 				.block-image {
 					position: relative;
 					cursor: pointer;
@@ -14,7 +14,7 @@
 					background-size: cover;
 
 					@include media-query(md,max) {
-						width: 240px;
+						width: 300px;
 					}
 
 					@include media-query(xs,max) {

@@ -1,3 +1,4 @@
+
 .tab {
   width: 100%;
 
@@ -24,7 +25,7 @@
   }
 
   &--center {
-    margin: 100px auto;
+    margin:0 auto;
 
     @include media-query(sm,max) {
       position:static;
@@ -36,6 +37,8 @@
 
   .tab-controll {
     display: none;
+
+
   }
 
   .nav {
@@ -102,10 +105,11 @@
     }
   }
 
-  .tab-content {
+  &-content {
     width: 100%;
     top:0;
     display: none;
+    padding: 3em;
 
     @include media-query(sm,max) {
       display: block;

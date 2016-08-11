@@ -1,13 +1,18 @@
 .tab {
     width: map-get($sizes, md);
-    
+
     @include media-query(md,max) {
       width: 100%;
     }
 
     &-content {
+
       .container {
         width: 100%;
+      }
+
+      @include media-query(md,max) {
+        padding: 20px;
       }
     }
 
@@ -22,6 +27,7 @@
 
         .icon {
           color:#ebc7bc;
+          
           &--selected {
             color:white;
           }
