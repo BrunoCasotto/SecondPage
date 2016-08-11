@@ -1,6 +1,4 @@
 .tab {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 
   @include media-query(sm,min) {
@@ -26,10 +24,7 @@
   }
 
   &--center {
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform:translate(-50%, -50%);
+    margin: 100px auto;
 
     @include media-query(sm,max) {
       position:static;
@@ -54,48 +49,55 @@
       width: 100%;
     }
 
-    .icon {
-      width: 0.5em;
-      height: 1em;
-      position: relative;
-      bottom: 50%;
-      font-size: 3rem;
-      margin:0 0.5em;
+    .list-tab {
 
-      @include media-query(sm,max) {
-        margin-top: 0.5em;
-        font-size: 3rem;
-        justify-content: space-between;
-      }
+      .tab {
 
-      &:before {
-        position: absolute;
-        bottom: 50%;
-        cursor: pointer;
+        .icon {
+          width: 50px;
+          height: 80px;
+          position: relative;
+          bottom: 50%;
+          margin:0 0.5em;
 
-        @include media-query(sm,max) {
-          bottom:0;
+          &:before {
+            position: absolute;
+            font-size: 3rem;
+            bottom: 50%;
+            cursor: pointer;
+
+            @include media-query(sm,max) {
+              bottom:0;
+            }
+
+            &--selected {
+              color:white;
+            }
+          }
+
+          &:hover:before {
+            color:#c79180;
+          }
+
+          &:after{
+            content:'';
+            position: absolute;
+            border-top: solid 24px transparent;
+            border-right: solid 24px transparent;
+            border-left: solid 24px transparent;
+            border-bottom: solid 24px white;
+            border-bottom-width: 24px;
+            bottom:-6px;
+            display: none;
+            font-size: 3rem;
+          }
+
+
+          @include media-query(sm,max) {
+            margin-top: 0.5em;
+            justify-content: space-between;
+          }
         }
-
-        &--selected {
-          color:white;
-        }
-      }
-
-      &:hover:before {
-        color:#c79180;
-      }
-
-      &:after{
-        content:'';
-        position: absolute;
-        border-top: solid 0.5em transparent;
-        border-right: solid 0.5em transparent;
-        border-left: solid 0.5em transparent;
-        border-bottom: solid 0.5em white;
-        border-bottom-width: 0.5em;
-        bottom:-6px;
-        display: none;
       }
     }
   }

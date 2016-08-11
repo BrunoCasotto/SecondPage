@@ -20,6 +20,37 @@
             line-height: 1.5em;
             font-weight: 300;
             color:#aaa;
+
+            @include media-query(sm,max) {
+              font-size: 0.5em;
+            }
+        }
+
+        @include media-query(md,max) {
+          padding: 1em;
+          font-size: 2rem;
+        }
+
+        @include media-query(sm,max) {
+          text-align: center;
+        }
+      }
+
+      .grid {
+        width: map-get($sizes,md);
+
+        &__row {
+          justify-content: center;
+          flex-wrap: wrap;
+
+          .col {
+            margin: 0.5em;
+            width: auto;
+
+            @include media-query(md,max) {
+              width: 400px;
+            }
+          }
         }
       }
     }

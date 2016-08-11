@@ -1,5 +1,6 @@
 .tab {
     width: map-get($sizes, md);
+    
     @include media-query(md,max) {
       width: 100%;
     }
