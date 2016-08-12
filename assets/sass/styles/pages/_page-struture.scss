@@ -3,9 +3,10 @@
 	height: 100%;
 	padding-top: 100px;
 
-	@include media-query(md,max) {
-		padding-top: 50px;
+	@include media-query(sm,max) {
+		padding-top: 0;
 	}
+	
     .controlled-content {
       position: relative;
     }

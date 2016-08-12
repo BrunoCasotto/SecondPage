@@ -5,33 +5,72 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400italic,400,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="dist/app.css">
+        <script type="text/javascript">
+            window.onload = function(){
+                 $('#modal').hide();
+            }
+
+            function show(){
+              $('#modal').toggle();
+            }
+        </script>
     </head>
     <body>
+        <div id="modal" class="modal">
+          <div class="modal__content">
+            <div class="fildset">
+              <div class="fildset__header">
+                <div class="fildset__header__image">
+                </div>
+                <div class="fildset__header__icon">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+                <div class="fildset__header__close">
+                  <i onclick="show()" class="fa fa-times" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="fildset__content">
+                <div class="fildset__content__photo">
+                  <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                  <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                  <i class="fa fa-camera-retro" aria-hidden="true"></i>
+                </div>
+                <div class="fildset__content__text-area">
+                  <input type="text" placeholder="what's happening?" name="name" value="">
+                </div>
+                <div class="fildset__content__icons">
+                  <i class="fa fa-gift" aria-hidden="true"></i>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <i class="fa fa-check icon-blue" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       <div class="main">
         <div class="tab tab--center">
-          <input type="radio" id="tab1" name="tab-c" class="tab-controll" >
+          <input type="radio" id="tab1" name="tab-c" class="tab-controll" checked="checked" >
           <input type="radio" id="tab2" name="tab-c"class="tab-controll" >
           <input type="radio" id="tab3" name="tab-c" class="tab-controll">
-          <input type="radio" id="tab4" name="tab-c" class="tab-controll" checked="checked" >
           <div class="controlled-content">
             <div class="nav">
               <ul class="list-tab">
-                <li class="tab tab1">
-                  <label for="tab1" style=""class="icon fa fa-home icon-1"></label>
+                <li class="tab-item tab1" data-tooltip="Home">
+                  <label for="tab1" class="icon fa fa-home icon-1"></label>
                 </li>
-                <li class="tab tab2">
-                  <label for="tab2" class="icon fa fa-folder icon-2"></label>
+                <li class="tab-item tab2" data-tooltip="Folder">
+                  <label for="tab2" class="icon fa fa-folder icon-2" ></label>
                 </li>
-                <li class="tab tab3">
+                <li class="tab-item tab3" data-tooltip="Message">
                   <label for="tab3" class="icon fa fa-envelope icon-3"></label>
                 </li>
-                <li class="tab">
-                  <label for="tab4"  class="icon fa fa-twitter"></label>
+                <li class="tab-item" data-tooltip="Twitter">
+                  <label onclick="show()"  class="icon fa fa-twitter"></label>
                 </li>
               </ul>
             </div>
-
               <div  class=" tab-content tab-content--solid show-1">
                 <div class="home-content">
                   <div class="container">
@@ -47,7 +86,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="tab-content tab-content--solid show-2">
                 <div class="work-content">
                   <div class="container work-content__container">
@@ -109,7 +147,6 @@
                   </div>
                 </div>
                 </div>
-
               <div class="tab-content tab-content--solid show-3">
                 <div class="contact-content">
                   <div class="container">
@@ -141,34 +178,6 @@
                             <a href="#" class="button button--dark">Send Message</a>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="twitter-content show-4">
-                <div class="modal">
-                  <div class="modal__content">
-                    <div class="fildset">
-                      <div class="fildset__header">
-                        <div class="fildset__header__image">
-                          <img src="img/face.jpg" alt="" height="70" width="70" />
-                        </div>
-                        <div class="fildset__header__icon">
-                          <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </div>
-                        <div class="fildset__header__close">
-                          <i class="fa fa-times" aria-hidden="true"></i>
-                        </div>
-                      </div>
-                      <div class="fildset__content">
-                        <div class="fildset__content__photo">
-                          <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                          <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                          <i class="fa fa-camera-retro" aria-hidden="true"></i>
-                        </div>
-                        <input type:"text-area" class="fildset__content__text-area"></input>
-                        <div class="fildset__content__icons"></div>
                       </div>
                     </div>
                   </div>
