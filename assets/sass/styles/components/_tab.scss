@@ -37,6 +37,16 @@
 
   .tab-controll {
     display: none;
+.tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &--center {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
   }
 
   .nav {
@@ -129,6 +139,32 @@
             justify-content: space-between;
           }
         }
+    .icon {
+      position: relative;
+      font-size: 3em;
+      width: 0.5em;
+      height: 1em;
+      margin:0 0.5em;
+
+      &::before {
+        position: absolute;
+        content:attr('');
+        bottom: 50%;
+
+        &--selected {
+          color:white;
+        }
+      }
+
+      &::after{
+        content:'';
+        position: relative;
+        position: absolute;
+        border-top: solid 0.5em transparent;
+        border-right: solid 0.5em transparent;
+        border-left: solid 0.5em transparent;
+        border-bottom: solid 0.5em white;
+        border-bottom-width: 1.5em;
       }
     }
   }
@@ -152,5 +188,32 @@
         padding: 0.5em;
       }
     }
+  }
+  .tab-controll {
+    display: none;
+  }
+  // é feito um for com o numero de tabs, habilitando a selecionada.
+  @for $i from 1 through 3{
+    #tab#{$i}:checked + .tab-content-#{$i}{
+      display: block;
+    }
+  }
+
+  .tab-content {
+    width: 100%;
+    top:0;
+    display: none;
+
+    &--solid {
+      background-color: white;
+    }
+  }
+
+  &__nav {
+    &__icon {
+    }
+  }
+
+  &__tab-content {
   }
 }

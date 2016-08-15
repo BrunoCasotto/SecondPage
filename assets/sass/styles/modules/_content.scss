@@ -1,9 +1,11 @@
 .main {
+	display: flex;
+	flex-direction: column;
 
 .container {
 		width: 1200px;
 		margin:0 auto;
-		
+
 		@include media-query(gl,max) {
 			width: 100%;
 		}

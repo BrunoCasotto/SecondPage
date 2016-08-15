@@ -13,6 +13,8 @@
 
 		@include media-query(sm,max) {
 			flex-direction: column;
+			width: 90%;
+			height: 80%;
 		}
 
 		&--space {
