@@ -8,17 +8,17 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="dist/app.css">
         <script type="text/javascript">
-            window.onload = function(){
-                 $('#modal').hide();
-            }
+          window.onload = function(){
+            $('#tab1').prop("checked", true)
+          }
 
-            function show(){
-              $('#modal').toggle();
-            }
+          function show(){
+            $('#modal').toggle();
+          }
         </script>
     </head>
     <body>
-        <div id="modal" class="modal">
+        <div id="modal" class="modal" style="display: none;">
           <div class="modal__content">
             <div class="fildset">
               <div class="fildset__header">
