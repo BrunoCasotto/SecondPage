@@ -2,13 +2,10 @@
       position: fixed;
       width: 100vw;
       height: 100vh;
-      border-top: 0;
-      border-left: 0;
       background-color: rgba(131, 196, 245, 0.64);
+      top:0;
+      left:0;
       z-index: 100;
-      top:50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
 
       &--hidden {
         display: none;

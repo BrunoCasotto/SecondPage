@@ -1,8 +1,6 @@
 .tab {
     width: map-get($sizes, md);
 
-    box-shadow:0px 2px 0px 0px rgba(0, 0, 0, 0.25);
-    width: map-get($sizes, md);
     @include media-query(md,max) {
       width: 100%;
     }
@@ -15,9 +13,6 @@
 
       @include media-query(md,max) {
         padding: 20px;
-      }
-      .container {
-        width: 100%;
       }
     }
 

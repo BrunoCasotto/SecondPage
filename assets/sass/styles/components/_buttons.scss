@@ -1,21 +1,12 @@
 .button {
 	color: #fff;
 	display: flex;
-	background-image: url("../img/background.png");
-	color: #fff;
-
-	display: flex;
-
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	text-decoration: none;
 	text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 	font-weight: 700;
-	box-shadow: inset 0px 0px 0px 1.5px rgba(0, 0, 0, 0.5),
-	inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
-	font-weight: 700;
-	border-radius: 8px;
 	overflow: hidden;
 	font-size: 1.5em;
 	letter-spacing: -0.025em;
@@ -40,11 +31,5 @@
 		width: 90%;
 		font-size: 1.0rem;
 		padding: 12px 10px;
-	}
-	&--calm {
-		background-color: #43B3E0;
-	}
-	&--dark {
-		background-color: #444;
 	}
 }
